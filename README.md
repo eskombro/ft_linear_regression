@@ -4,20 +4,27 @@ ft_linear_regression is an introductory project in 42 Paris to Machine learning 
 
 ## Study case
 
-A simple dataset of vehicles, comparing mileage and market price for each car. The algorithm is supposed to be trained in order to predict a price given a specific mileage.
+A simple dataset of vehicles, comparing mileage and market price for each car.
+
+The algorithm is trained in order to predict a price given a specific mileage.
 
 ## Training
 
 `python3 train.py`
 
-Start training the algorithm with the dataset at data/data.csv
-Finally, the trained parameters are stroed in the file data/tetha.csv for further usage.
+![alt text](./img/train.png "Training Plot")
+
+Start training the algorithm with the dataset at `data/data.csv`
+
+Finally, the trained parameters are stored in the file `data/tetha.csv` for further usage.
 
 ## Prediction
 
 `python3 predict.py`
 
-This script will ask for a numeric value and make a prediction.
+![alt text](./img/predict.png "Prediction Plot")
+
+This script will ask for a numeric value for the mileage and make an estimation on the price.
 
 # Requirements
 
