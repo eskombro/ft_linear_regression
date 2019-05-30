@@ -9,6 +9,8 @@ class GDGraph():
         self.x_lab = x_lab
         self.y_lab = y_lab
         self.title = title
+        self.figure = plt.figure()
+        self.figure.set_facecolor('#CCCCFF')
 
     def set_custom(self):
         if (self.x_lab):
