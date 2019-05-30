@@ -1,6 +1,19 @@
 from src.GradientDescent import GradientDescent
 
 
+def value_from_prompt():
+    while (42):
+        val = input("Type mileage to get price: ")
+        try:
+            val_f = float(val)
+            if (val_f > 0):
+                return (val_f)
+            else:
+                print("Mileage must be greater than 0")
+        except Exception as e:
+            print(e)
+    return (0)
+
 def get_theta_values():
     try:
         f = open("data/theta.csv", "r")
@@ -13,7 +26,8 @@ def get_theta_values():
 
 
 if __name__ == "__main__":
+    target = value_from_prompt()
     t = get_theta_values()
     gd = GradientDescent()
-    prediction = gd.hypothesis(t, 42000)
-    print(prediction)
+    prediction = gd.hypothesis(t, target)
+    print("Estimated price: {}".format(prediction))
