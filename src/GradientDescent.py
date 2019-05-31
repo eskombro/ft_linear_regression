@@ -59,8 +59,7 @@ class GradientDescent():
             sum += step_1 * step_1
         return (sum / 2 * self.m)
 
-    def gradient_descent(self):
-        learning_rate = 0.0001
+    def gradient_descent(self, learning_rate=0.001):
         t = [0.0, 0.0]
         tmp_t = [0.0, 0.0]
         norm = self.normalize_data()

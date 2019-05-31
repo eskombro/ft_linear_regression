@@ -1,14 +1,11 @@
 from src.GradientDescent import GradientDescent
 
 
-def train():
-    gd = GradientDescent(True)
-    t, iter, cost = gd.gradient_descent()
+def print_result(t, iter, cost):
     print("Total iterations:       {}".format(iter))
     print("Last iteration cost:    {}".format(cost))
     print("Theta 0:                {}".format(t[0]))
     print("Theta 1:                {}".format(t[1]))
-    return(t)
 
 
 def write_results_file(t):
@@ -22,6 +19,14 @@ def write_results_file(t):
     print("Theta values were written in file: {}".format(f.name))
 
 
+def train():
+    gd = GradientDescent(True)
+    t, iter, cost = gd.gradient_descent(learning_rate=0.0005)
+
+    return(t, iter, cost)
+
+
 if __name__ == "__main__":
-    t = train()
+    t, iter, cost = train()
     write_results_file(t)
+    print_result(t, iter, cost)
